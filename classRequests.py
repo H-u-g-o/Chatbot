@@ -31,10 +31,10 @@ class botRequest:
                     sql = """SELECT `%s` FROM `%s` WHERE `%s` = %s""" % (data, dataTable, whereCol, whereVal)
                 cursor.execute(sql)
                 dataList = cursor.fetchall()
-                list = []
+                liste = []
                 for elt in dataList:
-                    list.append(elt[data])
-                return list
+                    liste.append(elt[data])
+                return liste
 
 
         finally:
